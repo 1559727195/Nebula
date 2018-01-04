@@ -1,0 +1,68 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F8F8F8"
+    android:orientation="vertical"
+   >
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_set_Verification"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#333333"
+        android:fitsSystemWindows="true"
+        app:navigationIcon="@drawable/back"
+        app:title=" ">
+
+        <TextView
+            android:id="@+id/txt_set_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:text="输入验证码"
+            android:textColor="#FFF"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="18sp" />
+    </android.support.v7.widget.Toolbar>
+    <EditText
+        android:id="@+id/et_code"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/bg_input"
+        android:hint="请输入验证码"
+        android:inputType="phone"
+        android:textColorHint="@color/hint_text"
+        android:paddingLeft="15dp"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/tv_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_below="@+id/et_code"
+        android:textSize="12sp"
+        android:gravity="center_vertical"
+        android:layout_marginRight="15dp"
+        android:text="您的手机将收到一个来电，号码格式为05311234****，请输入****部分的数字。"
+        android:layout_marginTop="15dp"/>
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="40dp"
+        android:layout_height="wrap_content">
+        <Button android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="下一步"
+            android:id="@+id/bt_next"
+            android:textSize="12sp"
+            android:textColor="@color/btn_color_select"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/btn_login_selecter"
+            app:layout_widthPercent="70%"/>
+    </android.support.percent.PercentRelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,49 @@
+<android.support.v7.widget.Toolbar android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:background="?attr/colorPrimary"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+</android.support.v7.widget.Toolbar>
+
+<!--<android.support.v4.widget.DrawerLayout-->
+<!--android:id="@+id/drawerLayout"-->
+<!--android:layout_width="match_parent"-->
+<!--android:layout_height="match_parent">-->
+<!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical">-->
+    <!--<FrameLayout-->
+        <!--android:id="@+id/fl_realcontent"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_weight="1"></FrameLayout>-->
+    <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:background="#eee"/>-->
+    <!--<FrameLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="#fff">-->
+        <!--<android.support.v4.app.Fragment-->
+            <!--android:id="@+id/tab_host"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"/>-->
+        <!--<ImageView-->
+            <!--android:id="@+id/iv_add"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@mipmap/btn_quickoption_nor"-->
+            <!--android:layout_gravity="center"/>-->
+    <!--</FrameLayout>-->
+
+
+<!--</LinearLayout>-->
+<!--<FrameLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_gravity ="left"-->
+    <!--android:background="#eee"-->
+    <!--&gt;</FrameLayout>-->
+<!--</android.support.v4.widget.DrawerLayout>-->

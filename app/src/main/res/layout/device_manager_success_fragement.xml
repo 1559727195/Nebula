@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/second"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:text="云端"
+            android:textSize="14sp"
+            android:id="@+id/su_all"
+            android:textColor="#414358"
+            android:layout_height="40dp"
+            android:paddingLeft="1dp"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:text="已上传"
+            android:layout_height="40dp"
+            android:id="@+id/su_sucess1"
+            android:textSize="14sp"
+            android:textColor="#6d6d72"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:text="未上传"
+            android:textSize="14sp"
+            android:id="@+id/su_fail"
+            android:layout_marginRight="1dp"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:textColor="#6d6d72"
+            android:layout_weight="1"
+            />
+    </LinearLayout>
+
+    <com.zhongtianli.nebula.maxwin.view.XListView
+        android:layout_marginTop="10dp"
+        android:id="@+id/xListView_success"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" android:cacheColorHint="#00000000">
+    </com.zhongtianli.nebula.maxwin.view.XListView>
+</LinearLayout>

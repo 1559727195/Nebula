@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8"/>
+        <script>
+            function verify() {
+                var code = document.getElementById("code");
+                cia.verifyCode(code.value);
+            }
+
+            function afterVerification(status, msg) {
+                switch(status){
+                case 100:
+                    cia.showToast("验证成功");
+                    return;
+                }
+                cia.showToast(msg);
+            }
+        </script>
+    </head>
+    <body>
+        <input id="code" placeholder="请输入验证码" type="tel"/>
+        <button onclick="verify()">验证</button>
+    </body>
+</html>

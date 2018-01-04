@@ -1,0 +1,128 @@
+<resources>
+
+    <!-- DrawerArrowStyle -->
+    <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@android:color/white</item>
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/myPrimaryColor</item>
+        <item name="colorPrimaryDark">@color/myNavigationColor</item>
+        <item name="colorAccent">@color/myPrimaryColor</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+    </style>
+    <!-- Base application theme. -->
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+        <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+        <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+    <!--</style>-->
+
+    <!--<style name="AppTheme" parent="AppTheme.Base">-->
+    <!--</style>-->
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.NoActionBar">
+        <!-- toolbar（actionbar）颜色 -->
+        <item name="colorPrimary">#FFFFFF</item>
+        <item name="colorPrimaryDark">@color/grayer</item>
+        <item name="android:windowBackground">@color/grayer</item>
+        <!--toolbar标题文字颜色-->
+        <item name="android:textColorPrimary">@android:color/white</item>
+    </style>
+
+    !-- toolbar菜单样式 -->
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="actionMenuTextColor">@android:color/white</item>
+    </style>
+
+    <!-- toolbar标题样式 -->
+    <style name="ToolbarTitle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <!--  这个是加入的代码 -->
+    <style name="mypopwindow_anim_style">
+        <item name="android:windowEnterAnimation">@anim/popshow_anim</item>
+        <!-- 指定显示的动画xml -->
+
+        <item name="android:windowExitAnimation">@anim/pophidden_anim</item>
+        <!-- 指定消失的动画xml -->
+    </style>
+
+
+    <style name="profile_drawer_name">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/drawer_text</item>
+    </style>
+
+    <style name="right_drawer_top_count" parent="@style/top_update_count">
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+
+    <style name="top_update_count">
+        <item name="android:textSize">10.0sp</item>
+        <item name="android:textColor">#ffcc3131</item>
+        <item name="android:gravity">center</item>
+        <item name="android:height">15.0dip</item>
+        <item name="android:width">15.0dip</item>
+    </style>
+
+    <style name="left_drawer_item_line">
+        <item name="android:background">@color/left_drawer_item_line</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">0.5dip</item>
+    </style>
+
+    <style name="left_drawer_item_layout">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@drawable/left_drawer_item_bg</item>
+        <item name="android:paddingLeft">40.0dip</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minHeight">50.0dip</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="left_drawer_item_text">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textColor">@color/left_drawer_item_text</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">9.0dip</item>
+        <item name="android:paddingBottom">9.0dip</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawablePadding">25.0dip</item>
+    </style>
+
+    <style name="left_drawer_count" parent="@style/top_update_count">
+    <item name="android:textSize">8.0sp</item>
+    <item name="android:textColor">#ff000000</item>
+</style>
+
+    <style name="CustomCheckboxTheme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_style</item>
+    </style>
+
+    <!--loading_dialog-->
+    <style name="loading_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent_background</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+
+        <!-- 设置无遮罩层 -->
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <!--仿手机QQ网络状态条的显示与消失，没网络时显示，有网络时自动消失 ，点击网络条设置网络-->
+    <style name="wrap_content">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+</resources>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_actionbar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#333333"
+        android:fitsSystemWindows="true"
+        app:navigationIcon="@drawable/left"
+        app:title=" ">
+        <ImageView
+            android:id="@+id/toolbar_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:text="nebula"
+            android:textColor="#000"
+            android:src="@drawable/logo_main"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="30dp" />
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_gravity="right"
+            android:id="@+id/rel_right_cr"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/toolbar_scanel"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:src="@drawable/right"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                />
+        </RelativeLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#E3E3E3"
+        android:orientation="vertical" >
+
+        <!--<include-->
+            <!--android:id="@+id/toolbar_actionbar"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="37dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选择小区"
+                    android:textSize="12sp"
+                    android:textColor="#6d6d72"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="17dp"/>
+            </LinearLayout>
+            <android.support.percent.PercentRelativeLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="#FFFFFF">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/text_select"
+                    android:text="新康花园"
+                    android:textSize="14sp"
+                    app:layout_widthPercent="70%"
+                    android:gravity="center"
+                    android:textColor="#414358"
+                    android:layout_centerInParent="true"/>
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:id="@+id/relati_img_search"
+                    app:layout_widthPercent="30%"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/img_search"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="15dp"
+                        android:src="@drawable/arrow"/>
+                </RelativeLayout>
+
+            </android.support.percent.PercentRelativeLayout>
+        <include layout="@layout/layout_netbar"/>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:id="@+id/container"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+        <!--<com.example.administrator.myapplication.view.PullToLoadView-->
+                <!--android:id="@+id/pullToLoadView"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent" />-->
+
+        </LinearLayout>
+    </LinearLayout>

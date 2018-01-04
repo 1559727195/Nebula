@@ -1,0 +1,115 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/linear_login"
+    android:orientation="vertical"
+    >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="57dp"
+        android:src="@drawable/logo_lo"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp"></View>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:textSize="14sp"
+        android:textColor="#8e8e92"
+        android:text="账号"/>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText  android:layout_width="0dp"
+            app:layout_widthPercent="80%"
+            android:layout_marginLeft="31dp"
+            android:id="@+id/edt_operator_name"
+            android:textSize="15sp"
+            android:maxLength="11"
+            android:textColor="#1d1d26"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:background="@null"
+            android:layout_height="30dp"/>
+        <ImageView  android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="31dp"
+            app:layout_widthPercent="80%"
+            android:src="@drawable/orange_normal_edit"
+            android:layout_below="@+id/edt_operator_name"/>
+    </android.support.percent.PercentRelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:textSize="14sp"
+        android:layout_marginTop="16dp"
+        android:textColor="#8e8e92"
+        android:text="密码"
+        />
+    <android.support.percent.PercentRelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText  android:layout_width="0dp"
+            app:layout_widthPercent="69%"
+            android:layout_marginLeft="31dp"
+            android:id="@+id/edt_operator_password"
+            android:maxLength="11"
+            android:inputType="textPassword"
+            android:textSize="15sp"
+            android:textColor="#1d1d26"
+            android:textCursorDrawable="@drawable/color_cursor"
+            android:background="@null"
+            android:layout_height="30dp"/>
+
+        <ImageView  android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="31dp"
+            app:layout_widthPercent="80%"
+            android:src="@drawable/orange_normal_edit"
+            android:layout_below="@+id/edt_operator_password"/>
+
+        <CheckBox  android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_see"
+            style="@style/CustomCheckboxTheme"
+            android:layout_alignBaseline="@+id/edt_operator_password"
+            android:layout_alignBottom="@+id/edt_operator_password"
+            android:layout_toRightOf="@+id/edt_operator_password"
+            android:layout_toEndOf="@+id/edt_operator_password" />
+    </android.support.percent.PercentRelativeLayout>
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="31dp"
+            android:text="登录"
+            android:id="@+id/login_btn"
+            android:textSize="15sp"
+            android:textColor="#fff"
+            android:background="#414141"
+            android:layout_marginTop="32dp"
+            app:layout_widthPercent="80%"/>
+    </android.support.percent.PercentRelativeLayout>
+
+    <TextView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        android:textSize="10sp"
+        android:textColor="#202020"
+        android:gravity="center"
+        android:text="@string/banquan"/>
+</LinearLayout>
+

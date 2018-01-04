@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="#E3E3E3"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_detail_mess"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#333333"
+        android:fitsSystemWindows="true"
+        app:navigationIcon="@drawable/back"
+        app:title=" ">
+
+        <TextView
+            android:id="@+id/toolbar_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:text="消息详情"
+            android:textColor="#FFF"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="18sp" />
+    </android.support.v7.widget.Toolbar>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="巴拉巴拉巴拉巴拉巴拉巴拉"
+        android:textSize="28px"
+        android:textColor="#2d2e2d"
+        android:layout_marginLeft="18dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="20dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2016年06月07日 17:22"
+            android:textSize="12sp"
+            android:textColor="#7b7b7b"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="系统管理员"
+                android:textSize="12sp"
+                android:textColor="#7b7b7b"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="18dp"
+                android:text="阅读:130"
+                android:textSize="12sp"
+                android:textColor="#7b7b7b"/>
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:textSize="12sp"
+            android:textColor="#2d2e2d"
+            android:layout_marginRight="10dp"
+            android:text="最近领导让我做一个关于文件浏览器的公共组件，该组件有两个activity，分别为A和B吧，现在客户如果使用我的文件浏览器组件，需要在自己的activity中（比如叫M）通过intent方式，先进入我的A，A再通过intent跳转到B，这个时候B把获取的一些数据要返回给M，之前做的时候都是两个相邻activity之间互相传值，而这次传值过程，中间相隔了一个A，于是这个问题困扰我好久，最后终于找到了解决办法······
+ 注：其实使用广播接收是最简单的方式，但因为是开发公共组件，要求客户使用方便，所以还是采用intent这种方式，废话不多说下面贴出我的核心代码："
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <script>
+            function verify(button) {
+                var phoneNumber = document.getElementById("phoneNumber");
+                cia.verify(phoneNumber.value);
+                button.innerHTML = "验证中...";
+            }
+
+            function afterVerification(pn, status, msg) {
+                document.getElementById("button").innerHTML = "验证";
+                switch(status) {
+                case 100:
+                    cia.showToast("验证成功");
+                    return;
+                case 101:
+                    // 验证码模式
+                    window.location.href = "code.html";
+                    break;
+                }
+                cia.showToast(msg);
+            }
+        </script>
+    </head>
+    <body>
+        <input id="phoneNumber" placeholder="请输入手机号" type="tel"/>
+        <button id="button" onclick="verify(this)">验证</button>
+    </body>
+</html>

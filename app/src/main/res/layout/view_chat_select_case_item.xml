@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="55dip"
+    android:background="@drawable/ic_launcher">
+
+
+    <TextView
+        android:id="@+id/btn_myquestion_first"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/ic_launcher"
+        android:gravity="center"
+        android:padding="13dip"
+        android:text="男"
+        android:textColor="@color/indianred"
+        android:textSize="22sp" />
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/divider"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_actionbar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#333333"
+        android:fitsSystemWindows="true"
+        app:navigationIcon="@drawable/back"
+        app:title=" ">
+
+        <TextView
+            android:id="@+id/toolbar_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:text="设备调试"
+            android:textColor="#FFF"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="18sp" />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:id="@+id/remote_control"
+            android:src="@drawable/control"
+            android:layout_marginRight="8dp"
+            />
+
+    </android.support.v7.widget.Toolbar>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#E3E3E3"
+        android:layout_weight="3.5">
+        <android.support.percent.PercentRelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.zhongtianli.nebula.maxwin.view.XListView
+                android:id="@+id/xListView_scan"
+                android:layout_width="fill_parent"
+                android:layout_below="@+id/top_left"
+                android:dividerHeight="5dp"
+                android:divider="#E3E3E3"
+                android:layout_height="fill_parent" android:cacheColorHint="#00000000">
+            </com.zhongtianli.nebula.maxwin.view.XListView>
+        </android.support.percent.PercentRelativeLayout>
+        </LinearLayout>
+</LinearLayout>

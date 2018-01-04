@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:background="@color/blue"
+        android:id="@+id/bottom1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_heightPercent="10%"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:background="#f5f5f5"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:src="@drawable/dot_check"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                ></ImageView>
+
+            <android.support.percent.PercentRelativeLayout
+                android:layout_width="0dp"
+                android:layout_weight="8"
+                android:layout_height="wrap_content"
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_sh"
+                    android:textSize="28px"
+                    android:textColor="#727380"
+                    android:ems="10"
+                    app:layout_widthPercent="80%"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentTop="true"
+                    android:gravity="left|center_vertical"
+                    android:text="南大门一号摆闸"/>
+
+                <com.zhongtianli.nebula.view.ScrollViewCustom
+                    android:layout_width="220px"
+                    android:layout_height="wrap_content"
+                    app:layout_widthPercent="20%"
+                    android:id="@+id/scrollView_id"
+                    android:layout_alignParentRight="true"
+                    android:scrollbars="none">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="25px"
+                            android:layout_marginRight="7dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/btn">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="进闸"
+                                android:layout_gravity="center"
+                                android:textColor="#FFF"
+                                />
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="17dp"
+                            android:layout_marginTop="5dp"
+                            >
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:id="@+id/offswitch_id"
+                                android:background="@drawable/btn_clicked"
+                                android:textColor="@color/white"
+                                android:textSize="30px"
+                                ></ImageView>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="关闸"
+                                android:layout_gravity="center"
+                                android:textColor="#FFF"
+                                />
+                        </FrameLayout>
+                    </LinearLayout>
+                </com.zhongtianli.nebula.view.ScrollViewCustom>
+
+            </android.support.percent.PercentRelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+    </android.support.percent.PercentRelativeLayout>
+</LinearLayout>

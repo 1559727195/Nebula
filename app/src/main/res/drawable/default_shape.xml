@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 定义矩形rectangle -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:shape="rectangle" >
+    <!-- 定义边框颜色 -->
+    <solid android:color="#d1d1d1"
+        />
+    <!-- 定义圆角弧度 -->
+    <corners
+        android:bottomLeftRadius="15dp"
+        android:bottomRightRadius="15dp"
+        android:topLeftRadius="15dp"
+        android:topRightRadius="15dp"
+        />
+    <!-- 描边 -->
+    <stroke
+        android:width="2dp"
+        android:color="@android:color/black"
+       />
+    <!-- 大小 -->
+    <size
+        android:width="50dp"
+        android:height="50dp"/><!-- 宽度和高度 -->
+</shape>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.percent.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:background="#F5F5F5"
+        android:layout_height="wrap_content">
+          <ImageView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/img_dot"
+              android:layout_centerVertical="true"
+              android:layout_marginLeft="12dp"
+              android:src="@drawable/bot"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/img_dot"
+            android:layout_marginLeft="9dp"
+            android:id="@+id/txt_linearLayout"
+            app:layout_widthPercent = "67%"
+            android:orientation="vertical"
+            >
+
+            <android.support.percent.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:id="@+id/mac_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Mac:"
+                    android:textColor="#6d6d72"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/mac_write"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginStart="13dp"
+                    android:layout_toEndOf="@+id/mac_txt"
+                    android:layout_toRightOf="@+id/mac_txt"
+                    android:text="public void onAttach"
+                    android:textColor="#414358"
+                    android:textSize="14sp" />
+
+            </android.support.percent.PercentRelativeLayout>
+
+            <android.support.percent.PercentRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/device_name_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="名称:"
+                    android:textColor="#6d6d72"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/txt_sh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginStart="13dp"
+                    android:layout_toEndOf="@+id/device_name_txt"
+                    android:layout_toRightOf="@+id/device_name_txt"
+                    android:text="南大门一号摆闸"
+                    android:textColor="#414358"
+                    android:textSize="14sp" />
+
+            </android.support.percent.PercentRelativeLayout>
+        </LinearLayout>
+
+        <com.zhongtianli.nebula.view.ScrollViewCustom
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            app:layout_widthPercent="27%"
+            android:id="@+id/scrollView_id"
+            android:layout_alignParentRight="true"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:id="@+id/frame_open"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    android:background="@drawable/btn">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:id="@+id/scroll_in"
+                        android:layout_gravity="center"
+                        android:textColor="#FFF"
+                        />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="14dp"
+                    android:id="@+id/frame_close"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="3dp"
+                    >
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:id="@+id/offswitch_id"
+                        android:src="@drawable/btn_clicked"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        ></ImageView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:id="@+id/scroll_out"
+                        android:layout_gravity="center"
+                        android:textColor="#FFF"
+                        />
+                </FrameLayout>
+            </LinearLayout>
+        </com.zhongtianli.nebula.view.ScrollViewCustom>
+    </android.support.percent.PercentRelativeLayout>
+</LinearLayout>

@@ -1,0 +1,68 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.2"
+    defaultConfig {
+        applicationId "com.zhongtianli.nebula"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        //添加如下配置就OK了
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+        ndk {abiFilters "armeabi","armeabi-v7a"}
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+repositories{
+    flatDir{
+        dirs 'libs' //就是你放aar的目录地址
+    }
+}
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    //noinspection GradleCompatible
+    compile 'com.android.support:appcompat-v7:26.1.0'
+    compile 'com.android.support:design:26.1.0'
+    compile 'com.android.support:percent:26.1.0'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.android.support:recyclerview-v7:26.1.0'
+    compile 'com.android.support:support-v4:26.1.0'
+    testCompile 'junit:junit:4.12'
+    compile 'com.vaadin.external.jsoup:jsoup-case-sensitive:1.9.2'
+    compile 'org.jsoup:jsoup:1.10.1'
+    compile 'com.squareup.retrofit:retrofit:2.0.0-beta2'
+    compile 'com.squareup.retrofit:converter-gson:2.0.0-beta2'
+    compile 'com.squareup.retrofit:adapter-rxjava:2.0.0-beta2'
+    //RxAndroid
+    compile 'io.reactivex:rxjava:1.0.8'
+    compile 'io.reactivex:rxandroid:1.0.1'
+    compile 'com.trello:rxlifecycle:0.3.0'
+    compile 'com.trello:rxlifecycle-components:0.3.0'
+    compile 'com.github.bumptech.glide:glide:3.6.1'
+    compile 'com.bartoszlipinski.recyclerviewheader:library:1.2.0'
+    compile 'me.iwf.photopicker:PhotoPicker:0.2.9@aar'
+    compile 'com.squareup.okhttp:okhttp:2.4.0'
+    compile 'com.zhy:okhttputils:2.6.2'
+    compile 'com.android.support:cardview-v7:26.1.0'
+    compile project(path: ':library')
+    compile files('libs/ackpasssdk.jar')
+    compile files('libs/cia_sdk_v_2_3_1.jar')
+    compile files('libs/eventbus.jar')
+    compile 'com.android.support:multidex:1.0.2'
+    implementation files('libs/zxing.jar')
+}

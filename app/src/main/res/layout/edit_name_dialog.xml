@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="16dp"
+    android:orientation="vertical" >
+
+    <android.support.percent.PercentRelativeLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageView  android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+            android:id="@+id/img_remove"
+             android:src="@drawable/ic_launcher"
+             android:layout_toRightOf="@+id/txt_v"/>
+
+        <TextView android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_v"
+            android:text="debug"
+            android:textSize="18sp"
+            app:layout_widthPercent="70%"
+            android:gravity="center_vertical"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <ImageView  android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/img_share"
+             android:src="@drawable/ic_launcher"
+            android:layout_toRightOf="@+id/img_remove"/>
+
+    </android.support.percent.PercentRelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_weight="7">
+
+        <android.support.percent.PercentRelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/dialog_fragment"
+            android:padding="10dp"
+             >
+
+            <TextView  android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="记录"
+                android:textSize="18sp"
+                android:id="@+id/txx_record"
+                android:layout_alignParentTop="true"
+                android:textAppearance="?android:textAppearanceLarge"/>
+
+            <EditText android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:id="@+id/txt_cotent_debug"
+                android:layout_below="@+id/txx_record"
+                android:text="11:34:21,578 DEBUG LocalUtil:43 - Skipping 'pageflow' due to ClassNotFoundException on org.directwebremoting.beehive.PageFlowCreator. Cause: Beehive/Weblogic jar file not available.
+11:34:21,593 DEBUG DefaultCreatorManager:43 - - adding creator type: spring = class org.directwebremoting.spring.SpringCreator
+"               android:inputType="none"
+                android:background="@null"
+                android:textSize="18sp"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+        </android.support.percent.PercentRelativeLayout>
+    </LinearLayout>
+</LinearLayout>
